@@ -6,15 +6,26 @@
     <title>Document</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
     <div id="root"></div>
-    <script>
+    <script type="text/babel">
         //const mesaj = "Merhaba";
         //const main =`<h1>${mesaj} Deneme Çalışması</h1>`;
         //document.getElementById("root").innerHTML=main;
 
-        const template= React.createElement("h1",null,"Merhaba");
+        //const template= React.createElement("h1",null,"Merhaba");
+        //const template= <h1>Merhaba</h1>; //JSX
+        const template=
+            <div>
+                <h1>Merhaba</h1>
+                <ul>
+                    <li>item1</li>
+                    <li>item2</li>
+                    <li>item3</li>
+                </ul>
+            </div>;
         const root= ReactDOM.createRoot(document.getElementById("root"));
         root.render(template);
     </script>
